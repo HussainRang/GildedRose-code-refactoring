@@ -1,0 +1,65 @@
+Aged Brie => 
+
+if(quality<50) quality+=1
+sellIn = sellIn - 1
+if(quality<50 && sellIn<0) quality+=1
+
+--------------------------------------------------------------------------
+
+quality = 0     sellIn=-1 sellIn=0 sellIn=1
+quality = -10   sellIn=-1 sellIn=0 sellIn=1
+quality = 49    sellIn=-1 sellIn=0 sellIn=1
+quality = 50    sellIn=-1 sellIn=0 sellIn=1
+quality = 51    sellIn=-1 sellIn=0 sellIn=1
+
+==========================================================================
+
+
+
+
+
+Backstage passes to a TAFKAL80ETC concert =>
+
+if(quality<50)
+{
+    quality += 1;
+    if(sellIn<11 && quality<50) quality += 1
+    if(sellIn<6 && quality<50) quality += 1
+}
+sellIn -= 1
+if(items.sellIn<0)  quality=0
+
+----------------------------------------------------------------------------
+sellIn = -1 , 0 , 1 , 11 , 6 , 8
+quality = -10 , 0 , 47 , 48 , 49 , 50 
+
+============================================================================
+
+
+
+
+
+Sulfuras, Hand of Ragnaros =>
+
+if(quality>0) quality -= 1;
+sellIn = sellIn-1;
+if(sellIn<0 && quality>0) quality -= 1;
+-----------------------------------------------------------------------------
+sellIn = -1,0,1,5
+quality = -10 , 0 , 1 , 10
+=============================================================================
+
+
+
+
+
+abc =>
+
+if(quality>0) quality-=1;
+sellIn -= 1;
+if(sellIn<0 && quality>0) quality -= 1;
+
+------------------------------------------------------------------------------
+quality = 0,1,10
+sellIn = -1,0,1
+==============================================================================
